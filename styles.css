@@ -1,0 +1,127 @@
+:root {
+    --bg-color-primary: gray;
+    --font-size-1: 24px;
+    --font-size-2: 36px;
+    --font-size-3: 48px;
+    --font-size-4: 60px;
+    --font-size-5: 72px;
+    --font-weight-1: 20;
+    --font-weight-2: 40;
+    --font-weight-3: 60;
+    --font-weight-4: 80;
+    --font-weight-5: 100;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.spiner {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.sector {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 20px solid transparent;
+    overflow: hidden;
+    border-radius: 50%;
+    mix-blend-mode: overlay;
+    animation: rotate var(--duration) linear infinite;
+}
+
+.sector1 {
+border-bottom: 20px solid red;
+--duration: 1.5s;
+
+
+}
+.sector2 {
+    border-left: 20px solid blue;
+    --duration: 1s;
+
+}
+  
+.sector3 {
+    border-top: 20px solid gray;
+    --duration: 2s;
+}
+
+.sector4 {
+    border-right: 20px solid pink;
+    --duration: 3s;
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.linear {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(90deg, yellow, blue);
+    background-size: 300%;
+    background-position: left;
+    animation: bg-animation 7s alternate infinite;
+
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    50% {
+        background-position: center;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+.title {
+    font-family: Arial, sans-serif;
+}
+  
+  .title1 {
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+}
+  
+  .title2 {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+}
+  
+  .title3 {
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-3);
+}
+  
+  .title4 {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-4);
+}
+  
+  .title5 {
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-5);
+}
+
+
+    
